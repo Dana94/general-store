@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img src="./assets/store-awning.png">
-    <case></case>
+  <div id="app container">
+    <img src="./assets/store-awning.png" style="width: 100%;">
+
+    <div class="row">
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+      <item></item>
+    </div>
   </div>
 </template>
 
 <script>
-import Case from './components/Case.vue';
+import Item from "./components/Item.vue";
+
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+      msg: "Welcome to Your Vue.js App"
+    };
   },
   components: {
-    Case
+    Item
   }
-}
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -30,7 +39,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-6 col-md-4">
 
   </div>
 </template>
@@ -14,8 +14,7 @@ export default {
   div {
     background-color: #d69657;
     height: 200px;
-    width: 200px;
-    display: inline-block;
+    // display: inline-block;
   }
 </style>
 
