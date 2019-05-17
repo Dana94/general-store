@@ -1,5 +1,5 @@
 <template>
-  <div id="app container">
+  <div id="app" class="container">
     <img src="./assets/store-awning.png" style="width: 100%;">
 
     <div class="row">
