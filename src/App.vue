@@ -3,7 +3,7 @@
     <img src="./assets/store-awning.png" style="width: 100%;">
 
     <div class="row shelf">
-      <item v-for="item in food" :key="item.id" :item="item"></item>
+      <item v-for="item in 5" :key="item.id"></item>
     </div>
   </div>
 </template>
@@ -15,32 +15,7 @@ export default {
   name: "app",
   data() {
     return {
-      food: [
-        {
-          name: 'Apples',
-          imgSrc: '../assets/food/apple.png'
-        },
-         {
-          name: 'Bananas',
-          imgSrc: '../assets/food/apple.png' //TODO: replace
-        },
-        {
-          name: 'Grapes',
-          imgSrc: '../assets/food/grapes.png'
-        },
-        {
-          name: 'Cupcakes',
-          imgSrc: '../assets/food/apple.png' //TODO: replace
-        },
-        {
-          name: 'Cakes',
-          imgSrc: '../assets/food/apple.png' //TODO: replace
-        },
-        {
-          name: 'Chocolates',
-          imgSrc: '../assets/food/apple.png' //TODO: replace
-        },
-      ]
+
     };
   },
   components: {

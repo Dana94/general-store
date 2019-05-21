@@ -1,6 +1,6 @@
 <template>
   <div class="col-6 col-md-4 case">
-    <img src="../assets/food/apple.png" :alt="item.name" class="img-fluid">
+    <img src="../assets/food/apple.png" alt="" class="img-fluid">
     <div class="cost">Cost</div>
     <div class="total">Total</div>
   </div>
@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  props: ['item']
 };
 </script>
 
