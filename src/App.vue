@@ -2,13 +2,8 @@
   <div id="app" class="container">
     <img src="./assets/store-awning.png" style="width: 100%;">
 
-    <div class="row">
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
+    <div class="row shelf">
+      <item v-for="item in food" :key="item.id" :item="item"></item>
     </div>
   </div>
 </template>
@@ -20,7 +15,32 @@ export default {
   name: "app",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      food: [
+        {
+          name: 'Apples',
+          imgSrc: '../assets/food/apple.png'
+        },
+         {
+          name: 'Bananas',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Grapes',
+          imgSrc: '../assets/food/grapes.png'
+        },
+        {
+          name: 'Cupcakes',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Cakes',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Chocolates',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+      ]
     };
   },
   components: {
@@ -29,7 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +57,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.shelf {
+  padding: 2rem;
+  padding-top: 0;
 }
 
 h1,

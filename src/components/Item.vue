@@ -1,19 +1,26 @@
 <template>
   <div class="col-6 col-md-4 case">
+    <img src="../assets/food/apple.png" :alt="item.name" class="img-fluid">
     <div class="cost">Cost</div>
     <div class="total">Total</div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['item']
+};
 </script>
 
 <style lang="scss" scoped>
 .case {
-  background-color: #d69657;
+  background-color: #ffd2a6;
   height: 200px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
 }
 
 .cost {
@@ -31,6 +38,10 @@ export default {};
   bottom: 0;
   right: 0;
   padding: 20px;
+}
+
+img {
+  max-height: 80%;
 }
 </style>
 
