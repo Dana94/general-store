@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <img src="./assets/store-awning.png" style="width: 100%;">
 
-    <div class="row">
+    <div class="row shelf">
       <item></item>
       <item></item>
       <item></item>
@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +37,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.shelf {
+  padding: 2rem;
+  padding-top: 0;
 }
 
 h1,
