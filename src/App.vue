@@ -3,12 +3,7 @@
     <img src="./assets/store-awning.png" style="width: 100%;">
 
     <div class="row shelf">
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
-      <item></item>
+      <item v-for="item in food" :key="item.id" :item="item"></item>
     </div>
   </div>
 </template>
@@ -20,7 +15,32 @@ export default {
   name: "app",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      food: [
+        {
+          name: 'Apples',
+          imgSrc: '../assets/food/apple.png'
+        },
+         {
+          name: 'Bananas',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Grapes',
+          imgSrc: '../assets/food/grapes.png'
+        },
+        {
+          name: 'Cupcakes',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Cakes',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+        {
+          name: 'Chocolates',
+          imgSrc: '../assets/food/apple.png' //TODO: replace
+        },
+      ]
     };
   },
   components: {
