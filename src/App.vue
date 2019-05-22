@@ -5,11 +5,13 @@
     <div class="row shelf">
       <item v-for="item in 5" :key="item.id"></item>
     </div>
+    <cart></cart>
   </div>
 </template>
 
 <script>
 import Item from "./components/Item.vue";
+import Cart from "./components/Cart.vue";
 
 export default {
   name: "app",
@@ -19,7 +21,8 @@ export default {
     };
   },
   components: {
-    Item
+    Item,
+    Cart
   }
 };
 </script>
