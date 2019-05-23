@@ -2,16 +2,17 @@
   <div id="app" class="container">
     <img src="./assets/store-awning.png" style="width: 100%;">
 
-    <div class="row shelf">
+    <!-- <div class="row shelf">
       <item v-for="item in 5" :key="item.id"></item>
-    </div>
+    </div> -->
+    <shelf></shelf>
     <cart></cart>
   </div>
 </template>
 
 <script>
-import Item from "./components/Item.vue";
 import Cart from "./components/Cart.vue";
+import Shelf from "./components/Shelf.vue";
 
 export default {
   name: "app",
@@ -21,8 +22,9 @@ export default {
     };
   },
   components: {
-    Item,
-    Cart
+   // Item,
+    Cart,
+    Shelf
   }
 };
 </script>
@@ -36,10 +38,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.shelf {
-  padding: 2rem;
-  padding-top: 0;
-}
+// .shelf {
+//   padding: 2rem;
+//   padding-top: 0;
+// }
 
 h1,
 h2 {
