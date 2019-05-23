@@ -9,7 +9,10 @@
     </div>
     <div class="col-12 col-sm-4 case">
       <div class="row">
-        <!-- <button class="btn btn-primary" @click="showList">List</button> -->
+        <button class="btn btn-primary" @click="addItem({food: 'cake', price: 2})">Add Cake</button>
+        <ul>
+          <li v-for="item in list" :key="item.id">{{item.food}}</li>
+        </ul>
       </div>
       <div class="row">
         <!-- <button class="btn btn-primary" @click="checkout">Checkout</button> -->
@@ -19,11 +22,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["total"])
+    ...mapGetters(["total", "list"])
+  },
+  methods: {
+    ...mapActions(["addItem"])
   }
 };
 </script>

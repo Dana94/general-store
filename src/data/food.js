@@ -1,26 +1,38 @@
 export default [
   {
-    name: "Apples",
-    imgSrc: "../../assets/food/apple.png"
+    food: "Apples",
+    imgSrc: "../../assets/food/apple.png",
+    inStock: 2,
+    price: 2
   },
   {
-    name: "Bananas",
-    imgSrc: "../../assets/food/apple.png" //TODO: replace
+    food: "Bananas",
+    imgSrc: "../../assets/food/apple.png", //TODO: replace,
+    inStock: 2,
+    price: 2
   },
   {
-    name: "Grapes",
-    imgSrc: "../../assets/food/grapes.png"
+    food: "Grapes",
+    imgSrc: "../../assets/food/grapes.png",
+    inStock: 2,
+    price: 2
   },
   {
-    name: "Cupcakes",
-    imgSrc: "../../assets/food/apple.png" //TODO: replace
+    food: "Cupcakes",
+    imgSrc: "../../assets/food/apple.png", //TODO: replace
+    inStock: 2,
+    price: 2
   },
   {
-    name: "Cakes",
-    imgSrc: "../../assets/food/apple.png" //TODO: replace
+    food: "Cakes",
+    imgSrc: "../../assets/food/apple.png", //TODO: replace
+    inStock: 2,
+    price: 2
   },
   {
-    name: "Chocolates",
-    imgSrc: "../../assets/food/apple.png" //TODO: replace
+    food: "Chocolates",
+    imgSrc: "../../assets/food/apple.png", //TODO: replace
+    inStock: 2,
+    price: 2
   }
 ];
