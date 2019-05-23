@@ -2,14 +2,13 @@
   <div class="row">
     <div class="col-12 col-sm-4 case">
       <!-- <button class="btn btn-primary">{{total}}</button> -->
-      <p>{{total}}</p>
+      <p>$ {{total}}</p>
     </div>
     <div class="col-12 col-sm-4 case">
       <img src="../assets/cart.png" alt class="img-fluid">
     </div>
     <div class="col-12 col-sm-4 case">
       <div class="row">
-        <button class="btn btn-primary" @click="addItem({food: 'cake', price: 2})">Add Cake</button>
         <ul>
           <li v-for="item in list" :key="item.id">{{item.food}}</li>
         </ul>

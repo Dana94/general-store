@@ -1,13 +1,16 @@
 <template>
   <div class="col-6 col-md-4 case">
-    <img src="../assets/food/apple.png" alt="" class="img-fluid">
-    <div class="cost">Cost</div>
-    <div class="total">Total</div>
+    <img src="../assets/food/apple.png" alt class="img-fluid">
+    <div class="cost">{{item.price}}</div>
+    <div class="total">{{item.name}}</div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["item"],
+  methods: {
+  }
 };
 </script>
 
