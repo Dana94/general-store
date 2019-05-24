@@ -4,9 +4,11 @@ const state = {
   list: [
     {
       food: "apple",
+      amount: 2
     },
     {
       food: "chocolate",
+      amount: 1
     }
   ]
 };

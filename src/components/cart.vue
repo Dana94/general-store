@@ -10,7 +10,7 @@
     <div class="col-12 col-sm-4 case">
       <div class="row">
         <ul>
-          <li v-for="item in list" :key="item.id">{{item.food}}</li>
+          <li v-for="item in list" :key="item.id">{{item.food}} ({{item.amount}})</li>
         </ul>
       </div>
       <div class="row">
