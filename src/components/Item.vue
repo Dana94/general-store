@@ -13,6 +13,8 @@ export default {
   methods: {
     addFood() {
       this.$store.dispatch('addItem', this.item);
+      this.$store.dispatch('takeItem', this.item);
+
     }
   }
 };

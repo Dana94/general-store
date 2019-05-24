@@ -1,22 +1,13 @@
 const state = {
-  // TODO: reset
-  total: 10,
-  list: [
-    {
-      food: "apple",
-      amount: 2
-    },
-    {
-      food: "chocolate",
-      amount: 1
-    }
-  ]
+  total: 0,
+  list: []
 };
 
 const mutations = {
   'ADD_ITEM'(state, { food, price }) {
     state.list.push({
-      food
+      food,
+      amount: 1
     });
     state.total += price;
   }
