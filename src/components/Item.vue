@@ -1,8 +1,9 @@
 <template>
-  <div class="col-6 col-md-4 case">
+  <div class="col-6 col-md-4 case" @click="addFood">
     <img src="../assets/food/apple.png" alt class="img-fluid">
+    <div class="amount">{{item.inStock}}</div>
     <div class="cost">{{item.price}}</div>
-    <div class="total">{{item.name}}</div>
+    <div class="total">{{item.food}}</div>
   </div>
 </template>
 
@@ -10,6 +11,11 @@
 export default {
   props: ["item"],
   methods: {
+    addFood() {
+      this.$store.dispatch('addItem', this.item);
+      this.$store.dispatch('takeItem', this.item);
+
+    }
   }
 };
 </script>
@@ -23,6 +29,7 @@ export default {
   justify-content: center;
   align-items: center;
   border: 1px solid;
+  cursor: pointer;
 }
 
 .cost {
