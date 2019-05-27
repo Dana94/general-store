@@ -21,6 +21,19 @@
             <!-- TODO: item.imgSrc for 'apple.png'-->
             <img :src="'dist/'+'apple.png'" alt class="img-fluid">
           </div>
+          <div class="input-group">
+            <select
+              class="custom-select"
+              id="inputGroupSelect04"
+              aria-label="Example select with button addon"
+            >
+              <option selected>Choose...</option>
+              <option v-for="num in item.inStock" :key="num.id" value="num">{{num}}</option>
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
