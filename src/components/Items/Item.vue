@@ -2,10 +2,12 @@
   <div class="col-6 col-md-4 case">
     <div class="row">
       <div class="col-12">
-        <img src="../../assets/food/apple.png" alt class="img-fluid">
+        <!-- <img src="../../assets/food/apple.png" alt class="img-fluid"> -->
+        <!-- TODO: item.imgSrc for 'apple.png'-->
+        <img :src="'dist/'+'apple.png'" alt class="img-fluid">
+
       </div>
       <div class="col-12">
-        <!-- data-target="#foodModal" -->
         <button
           type="button"
           class="btn btn-primary"
@@ -17,7 +19,7 @@
     <!-- <div class="amount">{{item.inStock}}</div> -->
     <div class="cost">{{item.price | currency }}</div>
     <!-- <div class="total">{{item.food}}</div> -->
-    <app-modal :title="item.food" :modalId="modalId"></app-modal>
+    <app-modal :item="item" :modalId="modalId"></app-modal>
   </div>
 </template>
 
@@ -79,7 +81,8 @@ export default {
 }
 
 img {
-  max-height: 80%;
+  // showing the modal messes this up
+  // max-height: 80%;
 }
 </style>
 
