@@ -1,15 +1,21 @@
 <template>
-  <div class="col-6 col-md-4 case" @click="addFood">
-    <img src="../../assets/food/apple.png" alt class="img-fluid">
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#exampleModal"
-    >Launch demo modal</button>
-    <div class="amount">{{item.inStock}}</div>
+  <div class="col-6 col-md-4 case">
+    <div class="row">
+      <div class="col-12">
+        <img src="../../assets/food/apple.png" alt class="img-fluid">
+      </div>
+      <div class="col-12">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#appleModal"
+        >Launch</button>
+      </div>
+    </div>
+    <!-- <div class="amount">{{item.inStock}}</div>
     <div class="cost">{{item.price | currency }}</div>
-    <div class="total">{{item.food}}</div>
+    <div class="total">{{item.food}}</div>-->
     <app-modal></app-modal>
   </div>
 </template>
@@ -20,10 +26,11 @@ import Modal from "./Modal.vue";
 export default {
   props: ["item"],
   methods: {
-    addFood() {
-      this.$store.dispatch("addItem", this.item);
-      this.$store.dispatch("takeItem", this.item);
-    }
+    // addFood() {
+    //   this.$store.dispatch("addItem", this.item);
+    //   this.$store.dispatch("takeItem", this.item);
+    // }
+    displayModal() {}
   },
   components: {
     appModal: Modal

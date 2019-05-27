@@ -1,7 +1,7 @@
 <template>
   <div
     class="modal fade"
-    id="exampleModal"
+    id="appleModal"
     tabindex="-1"
     role="dialog"
     aria-labelledby="exampleModalLabel"
