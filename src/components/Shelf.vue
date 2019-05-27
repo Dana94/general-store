@@ -1,7 +1,6 @@
 <template>
   <div class="row shelf">
-    <!-- 1 back to food -->
-    <item v-for="item in 1" :key="item.id" :item="item"></item>
+    <item v-for="item in food" :key="item.id" :item="item"></item>
   </div>
 </template>
 

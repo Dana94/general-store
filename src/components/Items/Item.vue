@@ -5,18 +5,19 @@
         <img src="../../assets/food/apple.png" alt class="img-fluid">
       </div>
       <div class="col-12">
+        <!-- data-target="#foodModal" -->
         <button
           type="button"
           class="btn btn-primary"
           data-toggle="modal"
-          data-target="#appleModal"
+          :data-target="'#'+modalId"
         >Launch</button>
       </div>
     </div>
-    <!-- <div class="amount">{{item.inStock}}</div>
+    <!-- <div class="amount">{{item.inStock}}</div> -->
     <div class="cost">{{item.price | currency }}</div>
-    <div class="total">{{item.food}}</div>-->
-    <app-modal></app-modal>
+    <!-- <div class="total">{{item.food}}</div> -->
+    <app-modal :title="item.food" :modalId="modalId"></app-modal>
   </div>
 </template>
 
@@ -25,12 +26,17 @@ import Modal from "./Modal.vue";
 
 export default {
   props: ["item"],
+  data() {
+    return {
+      modalId: this.item.food + 'Modal'
+    }
+  },
   methods: {
     // addFood() {
     //   this.$store.dispatch("addItem", this.item);
     //   this.$store.dispatch("takeItem", this.item);
     // }
-    displayModal() {}
+
   },
   components: {
     appModal: Modal
@@ -46,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .case {
   // background-color: #ffd2a6;
-  height: 200px;
+  // height: 200px;
   position: relative;
   display: flex;
   justify-content: center;
