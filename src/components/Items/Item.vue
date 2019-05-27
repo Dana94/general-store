@@ -2,7 +2,6 @@
   <div class="col-6 col-md-4 case">
     <div class="row">
       <div class="col-12">
-        <!-- <img src="../../assets/food/apple.png" alt class="img-fluid"> -->
         <!-- TODO: item.imgSrc for 'apple.png'-->
         <img :src="'dist/'+'apple.png'" alt class="img-fluid">
 

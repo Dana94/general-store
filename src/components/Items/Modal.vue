@@ -17,7 +17,6 @@
         </div>
         <div class="modal-body">
           <div class="col-12">
-            <!-- <img src="../../assets/food/apple.png" alt class="img-fluid"> -->
             <!-- TODO: item.imgSrc for 'apple.png'-->
             <img :src="'dist/'+'apple.png'" alt class="img-fluid">
           </div>
@@ -26,9 +25,10 @@
               class="custom-select"
               id="inputGroupSelect04"
               aria-label="Example select with button addon"
+              v-model="option"
             >
-              <option selected>Choose...</option>
-              <option v-for="num in item.inStock" :key="num.id" value="num">{{num}}</option>
+              <option selected>Select amount</option>
+              <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
             </select>
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button">Button</button>
@@ -47,6 +47,11 @@
 <script>
 export default {
   props: ["item", "modalId"],
+  data() {
+    return {
+      option: "Select amount" // default
+    };
+  },
   methods: {
     // addFood() {
     //   this.$store.dispatch("addItem", this.item);
@@ -55,6 +60,11 @@ export default {
   },
   created() {
     console.log("title ", this.title);
+  },
+  watch: {
+    option() {
+      console.log("updated ", this.option);
+    }
   }
 };
 </script>
