@@ -63,6 +63,7 @@ export default {
         id: this.item.id,
         amount: this.option
       });
+      this.option = "Select amount";
     }
   },
   computed: {

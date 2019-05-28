@@ -5,10 +5,11 @@ const state = {
 
 const mutations = {
   ADD_ITEM(state, { item, amount }) {
+    // check if item is already in list
     let itemMatch = state.list.find(anItem => {
       return anItem.food === item.food;
     });
-    console.log(itemMatch);
+
     if (itemMatch) {
       itemMatch.amount += amount;
     } else {

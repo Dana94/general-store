@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-sm-4 case">
       <!-- <button class="btn btn-primary">{{total}}</button> -->
-      <p>$ {{total}}</p>
+      <p>{{total | convertTotal}}</p>
     </div>
     <div class="col-12 col-sm-4 case">
       <img src="../assets/cart.png" alt class="img-fluid">
@@ -29,6 +29,13 @@ export default {
   },
   methods: {
     ...mapActions(["addItem"])
+  },
+  filters: {
+    convertTotal(value) {
+      value = value.toString().substring(0, value.toString().indexOf('.') + 2);
+      console.log(value);
+      return `$${value}`;
+    }
   }
 };
 </script>
