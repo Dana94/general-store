@@ -12,7 +12,7 @@
           class="btn btn-primary"
           data-toggle="modal"
           :data-target="'#'+modalId"
-        >Launch</button>
+        >Select</button>
       </div>
     </div>
     <!-- <div class="amount">{{item.inStock}}</div> -->
