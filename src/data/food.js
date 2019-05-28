@@ -9,7 +9,7 @@ export default [
   {
     id: 2,
     food: "Bananas",
-    imgSrc: "apple.png", //TODO: replace,
+    imgSrc: "bananas.png",
     inStock: 32,
     price: 2.49
   },

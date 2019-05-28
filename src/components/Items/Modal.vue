@@ -18,9 +18,9 @@
         <div class="modal-body">
           <div class="col-12">
             <!-- TODO: item.imgSrc for 'apple.png'-->
-            <img :src="'dist/'+'apple.png'" alt class="img-fluid">
+            <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
-          <div class="input-group">
+          <div class="input-group" v-if="!notAvailable">
             <select
               class="custom-select"
               id="inputGroupSelect04"
@@ -31,13 +31,14 @@
               <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
             </select>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Button</button>
+              <button class="btn btn-outline-secondary" type="button" @click="addItem">Add</button>
             </div>
           </div>
+          <div v-else>This product is currently out of stock.</div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
     </div>
@@ -53,17 +54,21 @@ export default {
     };
   },
   methods: {
-    // addFood() {
-    //   this.$store.dispatch("addItem", this.item);
-    //   this.$store.dispatch("takeItem", this.item);
-    // }
+    addItem() {
+      this.$store.dispatch("addItem", {
+        item: this.item,
+        amount: this.option
+      });
+      this.$store.dispatch("takeItem", {
+        id: this.item.id,
+        amount: this.option
+      });
+      this.option = "Select amount";
+    }
   },
-  created() {
-    console.log("title ", this.title);
-  },
-  watch: {
-    option() {
-      console.log("updated ", this.option);
+  computed: {
+    notAvailable() {
+      return this.$store.getters.checkStock(this.item.id);
     }
   }
 };

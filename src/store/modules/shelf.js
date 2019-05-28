@@ -8,11 +8,11 @@ const mutations = {
   'SET_SHELF'(state, food){
     state.food = food;
   },
-  'TAKE_ITEM'(state, id) {
+  'TAKE_ITEM'(state, { id, amount } ) {
     let item = state.food.find(anItem => {
       return anItem.id == id;
     });
-    item.inStock -= 1;
+    item.inStock -= amount;
   }
 };
 
@@ -20,14 +20,21 @@ const actions = {
   initShelf({commit}){
     commit('SET_SHELF', food);
   },
-  takeItem({commit}, {id}){
-    commit('TAKE_ITEM', id);
+  takeItem({commit}, payload){
+    commit('TAKE_ITEM', payload);
   }
 };
 
 const getters = {
   stockShelf(state) {
     return state.food;
+  },
+  checkStock: (state) => (id) => {
+    let item = state.food.find(anItem => {
+      return anItem.id == id;
+    });
+    console.log(item)
+    return item.inStock === 0;
   }
 };
 

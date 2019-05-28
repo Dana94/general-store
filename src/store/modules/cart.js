@@ -4,18 +4,27 @@ const state = {
 };
 
 const mutations = {
-  'ADD_ITEM'(state, { food, price }) {
-    state.list.push({
-      food,
-      amount: 1
+  ADD_ITEM(state, { item, amount }) {
+    // check if item is already in list
+    let itemMatch = state.list.find(anItem => {
+      return anItem.food === item.food;
     });
-    state.total += price;
+
+    if (itemMatch) {
+      itemMatch.amount += amount;
+    } else {
+      state.list.push({
+        food: item.food,
+        amount
+      });
+    }
+    state.total += item.price * amount;
   }
 };
 
 const actions = {
   addItem({ commit }, payload) {
-    commit('ADD_ITEM', payload)
+    commit("ADD_ITEM", payload);
   }
 };
 
