@@ -4,12 +4,13 @@ const state = {
 };
 
 const mutations = {
-  'ADD_ITEM'(state, { food, price }) {
+  'ADD_ITEM'(state, { item, amount}) {
+    console.log(amount);
     state.list.push({
-      food,
-      amount: 1
+      food: item.food,
+      amount
     });
-    state.total += price;
+    state.total += item.price * amount;
   }
 };
 

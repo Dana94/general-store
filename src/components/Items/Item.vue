@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         <!-- TODO: item.imgSrc for 'apple.png'-->
-        <img :src="'dist/'+'apple.png'" alt class="img-fluid">
+        <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
 
       </div>
       <div class="col-12">

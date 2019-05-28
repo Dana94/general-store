@@ -18,7 +18,7 @@
         <div class="modal-body">
           <div class="col-12">
             <!-- TODO: item.imgSrc for 'apple.png'-->
-            <img :src="'dist/'+'apple.png'" alt class="img-fluid">
+            <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
           <div class="input-group">
             <select
@@ -31,7 +31,7 @@
               <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
             </select>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Button</button>
+              <button class="btn btn-outline-secondary" type="button" @click="addItem">Add</button>
             </div>
           </div>
         </div>
@@ -53,10 +53,19 @@ export default {
     };
   },
   methods: {
-    // addFood() {
-    //   this.$store.dispatch("addItem", this.item);
-    //   this.$store.dispatch("takeItem", this.item);
-    // }
+    addItem() {
+      this.$store.dispatch("addItem", {
+        item: this.item,
+        amount: this.option
+      });
+      this.$store.dispatch("takeItem", {
+        id: this.item.id,
+        amount: this.option
+      });
+    },
+    notAvailable() {
+      // return this.$store.getters
+    }
   },
   created() {
     console.log("title ", this.title);
