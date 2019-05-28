@@ -29,8 +29,12 @@ const getters = {
   stockShelf(state) {
     return state.food;
   },
-  checkStock(state) {
-    return state.food
+  checkStock: (state) => (id) => {
+    let item = state.food.find(anItem => {
+      return anItem.id == id;
+    });
+    console.log(item)
+    return item.inStock === 0;
   }
 };
 

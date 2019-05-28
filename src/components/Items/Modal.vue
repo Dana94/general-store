@@ -20,7 +20,7 @@
             <!-- TODO: item.imgSrc for 'apple.png'-->
             <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
-          <div class="input-group">
+          <div class="input-group" v-if="!notAvailable">
             <select
               class="custom-select"
               id="inputGroupSelect04"
@@ -34,6 +34,7 @@
               <button class="btn btn-outline-secondary" type="button" @click="addItem">Add</button>
             </div>
           </div>
+          <div v-else>This product is currently out of stock.</div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -62,17 +63,11 @@ export default {
         id: this.item.id,
         amount: this.option
       });
-    },
-    notAvailable() {
-      // return this.$store.getters
     }
   },
-  created() {
-    console.log("title ", this.title);
-  },
-  watch: {
-    option() {
-      console.log("updated ", this.option);
+  computed: {
+    notAvailable() {
+      return this.$store.getters.checkStock(this.item.id);
     }
   }
 };
