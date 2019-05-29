@@ -32,8 +32,7 @@ export default {
   },
   filters: {
     convertTotal(value) {
-      value = value.toString().substring(0, value.toString().indexOf('.') + 2);
-      console.log(value);
+      value = value.toString().substring(0, value.toString().indexOf('.') + 3);
       return `$${value}`;
     }
   }
