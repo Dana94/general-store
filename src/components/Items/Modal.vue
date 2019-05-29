@@ -20,25 +20,27 @@
             <!-- TODO: item.imgSrc for 'apple.png'-->
             <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
-          <div class="col-12" v-if="option !== 'Select amount'">
-            That will be: {{ item.price * option | convertTotal }}
-          </div>
-          <div class="input-group" v-if="!notAvailable">
-            <select
-              class="custom-select"
-              id="inputGroupSelect04"
-              aria-label="Example select with button addon"
-              v-model="option"
-            >
-              <option selected>Select amount</option>
-              <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
-            </select>
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" @click="addItem"
-              v-if="option !== 'Select amount'"
-              >Add</button>
+          <template v-if="!notAvailable">
+            <div class="input-group col-6">
+              <select
+                class="custom-select"
+                id="inputGroupSelect04"
+                aria-label="Example select with button addon"
+                v-model="option"
+              >
+                <option selected>Select amount</option>
+                <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
+              </select>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" @click="addItem"
+                v-if="option !== 'Select amount'"
+                >Add</button>
+              </div>
             </div>
-          </div>
+            <div class="col-6" v-if="option !== 'Select amount'">
+              {{ item.price * option | convertTotal }}
+            </div>
+          </template>
           <div v-else>This product is currently out of stock.</div>
         </div>
         <div class="modal-footer">
