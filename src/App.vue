@@ -4,7 +4,7 @@
 
     <!-- <div class="row shelf">
       <item v-for="item in 5" :key="item.id"></item>
-    </div> -->
+    </div>-->
     <shelf></shelf>
     <cart></cart>
   </div>
@@ -17,17 +17,19 @@ import Shelf from "./components/Shelf.vue";
 export default {
   name: "app",
   data() {
-    return {
-
-    };
+    return {};
   },
   components: {
-   // Item,
+    // Item,
     Cart,
     Shelf
   }
 };
 </script>
+
+<style lang="scss">
+  @import "src/assets/base.scss";
+</style>
 
 <style lang="scss" scoped>
 #app {

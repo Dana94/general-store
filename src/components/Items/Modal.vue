@@ -20,6 +20,9 @@
             <!-- TODO: item.imgSrc for 'apple.png'-->
             <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
+          <div class="col-12" v-if="option !== 'Select amount'">
+            That will be: {{ item.price * option | convertTotal }}
+          </div>
           <div class="input-group" v-if="!notAvailable">
             <select
               class="custom-select"
@@ -31,7 +34,9 @@
               <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
             </select>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" @click="addItem">Add</button>
+              <button class="btn btn-outline-secondary" type="button" @click="addItem"
+              v-if="option !== 'Select amount'"
+              >Add</button>
             </div>
           </div>
           <div v-else>This product is currently out of stock.</div>

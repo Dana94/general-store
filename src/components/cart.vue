@@ -29,13 +29,6 @@ export default {
   },
   methods: {
     ...mapActions(["addItem"])
-  },
-  filters: {
-    convertTotal(value) {
-      value = value.toString().substring(0, value.toString().indexOf('.') + 2);
-      console.log(value);
-      return `$${value}`;
-    }
   }
 };
 </script>
