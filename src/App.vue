@@ -1,14 +1,17 @@
 <template>
   <div id="app" class="container">
     <cart></cart>
-    <img src="./assets/store-awning.png" style="width: 100%;">
-    <shelf></shelf>
+    <!-- <img src="./assets/store-awning.png" style="width: 100%;"> -->
+    <!-- <shelf></shelf> -->
+    <cube></cube>
   </div>
 </template>
 
 <script>
 import Cart from "./components/Cart.vue";
 import Shelf from "./components/Shelf.vue";
+import Cube from "./components/Cube.vue";
+
 
 export default {
   name: "app",
@@ -16,9 +19,9 @@ export default {
     return {};
   },
   components: {
-    // Item,
     Cart,
-    Shelf
+    Shelf,
+    Cube
   }
 };
 </script>
