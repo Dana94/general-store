@@ -2,10 +2,11 @@
   <div class="col-6 col-md-4 case">
     <div class="row">
       <div class="col-12">
+        <div class="tag">{{item.price | currency }}</div>
         <!-- TODO: item.imgSrc for 'apple.png'-->
         <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
       </div>
-      <div class="col-12 col-sm-6">{{item.price | currency }}</div>
+
       <div class="col-12 col-sm-6">
         <button
           type="button"
@@ -33,7 +34,7 @@ export default {
     };
   },
   methods: {
-    
+
   },
   components: {
     appModal: Modal
@@ -56,6 +57,14 @@ export default {
   align-items: center;
   border: 1px solid;
   cursor: pointer;
+}
+
+.tag {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  padding: 0 1rem;
+  background-color: wheat;
 }
 
 .cost {
