@@ -3,14 +3,14 @@
     <cart></cart>
     <!-- <img src="./assets/store-awning.png" style="width: 100%;"> -->
     <!-- <shelf></shelf> -->
-    <cube></cube>
+    <cube-two></cube-two>
   </div>
 </template>
 
 <script>
 import Cart from "./components/Cart.vue";
 import Shelf from "./components/Shelf.vue";
-import Cube from "./components/Cube.vue";
+import CubeTwo from "./components/CubeTwo.vue";
 
 
 export default {
@@ -21,7 +21,7 @@ export default {
   components: {
     Cart,
     Shelf,
-    Cube
+    CubeTwo
   }
 };
 </script>
