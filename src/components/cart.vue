@@ -9,8 +9,7 @@
         <!-- <ul>
           <li v-for="item in list" :key="item.id">{{item.food}} ({{item.amount}})</li>
         </ul> -->
-
-      <!-- <img src="src/assets/cart.png" alt class="img-fluid"> -->
+      
     </div>
   </div>
 </template>

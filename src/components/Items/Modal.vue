@@ -15,16 +15,16 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body row">
           <div class="col-12">
-            <!-- TODO: item.imgSrc for 'apple.png'-->
+            <!-- TODO: item.imgSrc for image name-->
             <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
           </div>
           <template v-if="!notAvailable">
             <div class="input-group col-6">
               <select
                 class="custom-select"
-                id="inputGroupSelect04"
+                id="inputGroupSelect"
                 aria-label="Example select with button addon"
                 v-model="option"
               >
@@ -41,11 +41,7 @@
               {{ item.price * option | convertTotal }}
             </div>
           </template>
-          <div v-else>This product is currently out of stock.</div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          <div class="col-12" v-else>This product is currently out of stock.</div>
         </div>
       </div>
     </div>
