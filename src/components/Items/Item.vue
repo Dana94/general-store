@@ -1,18 +1,19 @@
 <template>
   <div class="col-6 col-md-4 case">
     <div class="row">
-      <div class="col-12">
-        <!-- TODO: item.imgSrc for 'apple.png'-->
-        <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
-      </div>
-      <div class="col-12 col-sm-6">{{item.price | currency }}</div>
-      <div class="col-12 col-sm-6">
+      <div class="col-12 level-1">
+        <div class="tag">{{item.price | currency }}</div>
         <button
           type="button"
           class="btn btn-primary"
           data-toggle="modal"
           :data-target="'#'+modalId"
         >Select</button>
+      </div>
+
+      <div class="col-12">
+        <!-- TODO: item.imgSrc for 'apple.png'-->
+        <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
       </div>
     </div>
     <!-- <div class="amount">{{item.inStock}}</div> -->
@@ -32,9 +33,7 @@ export default {
       modalId: this.item.food + "Modal"
     };
   },
-  methods: {
-    
-  },
+  methods: {},
   components: {
     appModal: Modal
   },
@@ -56,6 +55,19 @@ export default {
   align-items: center;
   border: 1px solid;
   cursor: pointer;
+
+  .level-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    padding-top: .5rem;
+  }
+}
+
+.tag {
+  padding: 0 1rem;
+  background-color: wheat;
 }
 
 .cost {

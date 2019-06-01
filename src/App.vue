@@ -1,12 +1,8 @@
 <template>
   <div id="app" class="container">
-    <img src="./assets/store-awning.png" style="width: 100%;">
-
-    <!-- <div class="row shelf">
-      <item v-for="item in 5" :key="item.id"></item>
-    </div>-->
-    <shelf></shelf>
     <cart></cart>
+    <img src="./assets/store-awning.png" style="width: 100%;">
+    <shelf></shelf>
   </div>
 </template>
 
@@ -14,15 +10,16 @@
 import Cart from "./components/Cart.vue";
 import Shelf from "./components/Shelf.vue";
 
+
 export default {
   name: "app",
   data() {
     return {};
   },
   components: {
-    // Item,
     Cart,
-    Shelf
+    Shelf,
+
   }
 };
 </script>

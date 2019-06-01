@@ -1,21 +1,15 @@
 <template>
   <div class="row">
-    <div class="col-12 col-sm-4 case">
-      <!-- <button class="btn btn-primary">{{total}}</button> -->
+    <div class="col-6 col-sm-4">
       <p>{{total | convertTotal}}</p>
     </div>
-    <div class="col-12 col-sm-4 case">
-      <img src="../assets/cart.png" alt class="img-fluid">
-    </div>
-    <div class="col-12 col-sm-4 case">
-      <div class="row">
-        <ul>
+    <div class="col-6 col-sm-4">
+
+        <!-- click on cart to get list??? -->
+        <!-- <ul>
           <li v-for="item in list" :key="item.id">{{item.food}} ({{item.amount}})</li>
-        </ul>
-      </div>
-      <div class="row">
-        <!-- <button class="btn btn-primary" @click="checkout">Checkout</button> -->
-      </div>
+        </ul> -->
+      
     </div>
   </div>
 </template>
@@ -36,5 +30,9 @@ export default {
 <style scoped>
 button {
   cursor: pointer;
+}
+
+div.row {
+  padding: 2rem;
 }
 </style>
