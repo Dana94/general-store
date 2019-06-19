@@ -10,13 +10,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="56.640209mm"
+   height="55.899521mm"
+   viewBox="0 0 56.640209 55.899521"
    version="1.1"
    id="svg6406"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="apple.svg">
+   sodipodi:docname="apple3.svg">
   <defs
      id="defs6400">
     <linearGradient
@@ -45,9 +45,9 @@
     </linearGradient>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="13.229166 : 150.0119 : 1"
+       inkscape:vp_x="13.229167 : 150.0119 : 1"
        inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="204.33036 : 144.72024 : 1"
+       inkscape:vp_z="204.33037 : 144.72024 : 1"
        inkscape:persp3d-origin="105 : 99 : 1"
        id="perspective6419" />
     <linearGradient
@@ -78,8 +78,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="446.38133"
-     inkscape:cy="942.97234"
+     inkscape:cx="156.34237"
+     inkscape:cy="107.24754"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -103,9 +103,10 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-76.739474,-19.981627)">
     <path
-       style="fill:url(#linearGradient6596);fill-opacity:1;fill-rule:evenodd;stroke:#241c1c;stroke-width:0.25734165;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.51468331, 0.25734164999999998;stroke-dashoffset:0;stroke-opacity:0.09019608;paint-order:stroke fill markers"
+       style="fill:url(#linearGradient6596);fill-opacity:1;fill-rule:evenodd;stroke:#241c1c;stroke-width:0.25734165;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.51468331, 0.25734165;stroke-dashoffset:0;stroke-opacity:0.09019608;paint-order:stroke fill markers"
        id="path6417-0"
        sodipodi:type="arc"
        sodipodi:cx="-8.5269136"

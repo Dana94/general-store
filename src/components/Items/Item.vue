@@ -13,7 +13,7 @@
 
       <div class="col-12">
         <!-- TODO: item.imgSrc for 'apple.png'-->
-        <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
+        <img :src="'src/assets/food/'+'apple3.svg'" alt class="img-fluid food-img">
       </div>
     </div>
     <!-- <div class="amount">{{item.inStock}}</div> -->
@@ -90,6 +90,7 @@ export default {
 img {
   // showing the modal messes this up
   // max-height: 80%;
+  width: 9rem;
 }
 </style>
 

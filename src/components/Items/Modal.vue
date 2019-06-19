@@ -18,7 +18,7 @@
         <div class="modal-body row">
           <div class="col-12">
             <!-- TODO: item.imgSrc for image name-->
-            <img :src="'src/assets/food/'+'bananas.png'" alt class="img-fluid">
+            <img :src="'src/assets/food/'+'apple3.svg'" alt class="img-fluid">
           </div>
           <template v-if="!notAvailable">
             <div class="input-group col-6">
@@ -32,14 +32,18 @@
                 <option v-for="num in item.inStock" :key="num.id" :value="num">{{num}}</option>
               </select>
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" @click="addItem"
-                v-if="option !== 'Select amount'"
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  @click="addItem"
+                  v-if="option !== 'Select amount'"
                 >Add</button>
               </div>
             </div>
-            <div class="col-6" v-if="option !== 'Select amount'">
-              {{ item.price * option | convertTotal }}
-            </div>
+            <div
+              class="col-6"
+              v-if="option !== 'Select amount'"
+            >{{ item.price * option | convertTotal }}</div>
           </template>
           <div class="col-12" v-else>This product is currently out of stock.</div>
         </div>
@@ -77,5 +81,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.modal-body {
+  & > div:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+}
 </style>
