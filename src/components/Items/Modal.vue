@@ -18,7 +18,7 @@
         <div class="modal-body row">
           <div class="col-12">
             <!-- TODO: item.imgSrc for image name-->
-            <img :src="'src/assets/food/'+'apple3.svg'" alt class="img-fluid">
+            <img :src="'src/assets/food/'+ item.imgSrc" alt class="img-fluid">
           </div>
           <template v-if="!notAvailable">
             <div class="input-group col-6">

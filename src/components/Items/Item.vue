@@ -13,7 +13,7 @@
 
       <div class="col-12">
         <!-- TODO: item.imgSrc for 'apple.png'-->
-        <img :src="'src/assets/food/'+'apple3.svg'" alt class="img-fluid food-img">
+        <img :src="'src/assets/food/'+ item.imgSrc" alt class="img-fluid food-img">
       </div>
     </div>
     <!-- <div class="amount">{{item.inStock}}</div> -->
